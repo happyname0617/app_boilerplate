@@ -6,7 +6,7 @@
   "author": "Andre Sattler <andresattler.webdev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --config webpack.config.js",
+    "dev": "webpack-dev-server --mode=development --config webpack.dev.js",
     "typecheck": "tsc",
     "pre-commit": "typecheck"
   },
@@ -16,8 +16,12 @@
     "@babel/preset-typescript": "^7.1.0",
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
+    "css-loader": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.3.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "typescript": "^3.2.2",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
