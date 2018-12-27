@@ -1,14 +1,11 @@
+body {
+  margin: 0;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-}
-
-.image {
-  width: 70%;
-  max-width: 800px;
-  height: auto;
-  margin-bottom: 50px;
-  cursor: pointer;
+  background-color: #ffd32a;
 }
