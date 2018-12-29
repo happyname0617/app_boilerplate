@@ -9,7 +9,7 @@ const App = () => {
 
   return (
       <div className={styles.container}>
-        <h1 className={styles.headder}>Similar Food</h1>
+        <h1 className={styles.title}>Similar Food</h1>
         {data.images.map((url: string) => <Card url={url} />)}
       </div>
   )

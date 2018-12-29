@@ -1,3 +1,7 @@
+$border-radius: 50px;
+$overlay-color: #485460;
+$button-color: #3c40c6;
+
 .wrapper {
   position: relative;
   width: 70%;
@@ -5,8 +9,11 @@
   border-radius: 50px;
   overflow: hidden;
   max-width: 800px;
-  margin-bottom: 50px;
+  margin-bottom: $border-radius;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover .image {
     transform: scale(0.4);
   }
@@ -30,11 +37,29 @@
   position: absolute;
   top: 0;
   left: 0;
-  background: #485460;
+  background-color: $overlay-color;
 	color: white;
-  text-align: center;
   opacity: 0;
-	transform: scale(0.7);
 	backface-visibility: hidden;
-	transition: transform 0.4s, opacity 0.4s;
+	transition: opacity 0.4s;
+}
+
+.title {
+  margin-left: $border-radius;
+  font-family: sans-serif;
+
+}
+
+.button {
+  width: 100px;
+  position: absolute;
+  bottom: $border-radius;
+  right: $border-radius;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 2px;
+  background-color: $button-color; 
+  color: white;
+  font-size: 16px;
+  font-family: sans-serif;
 }
