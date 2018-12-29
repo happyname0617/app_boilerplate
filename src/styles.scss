@@ -3,9 +3,14 @@ body {
 }
 
 .container {
+  widows: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  background-color: #ffd32a;
+}
+
+.headder {
+  font-family: sans-serif;
+  font-size: 48px;
 }

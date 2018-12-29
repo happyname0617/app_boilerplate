@@ -10,10 +10,10 @@ const Overlay = () => {
   )
 }
 
-const Card = () => {
+const Card = ({ url }: { url: string }) => {
   return (
     <figure className={styles.wrapper}>
-      <img  className={styles.image } src='https://c2.staticflickr.com/4/3092/2403194442_c537654716_z.jpg?zz=1' />
+      <img  className={styles.image } src={url} />
       <Overlay />
     </figure>
   )
