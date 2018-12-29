@@ -14,13 +14,14 @@ $button-color: #3c40c6;
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover .image {
-    transform: scale(0.4);
-  }
-  &:hover .overlay {
-    transform: scale(1);
-    opacity: 1;
-  }
+}
+
+.open .image {
+  transform: scale(0.4);
+}
+.open .overlay {
+  transform: scale(1);
+  opacity: 1;
 }
 
 .image {
