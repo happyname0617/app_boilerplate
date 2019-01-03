@@ -7,13 +7,18 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --config webpack.dev.js",
+    "server:build": "tsc && babel src/server/ --extensions \".ts\" -d dist/",
+    "server:start": "node dist/",
     "typecheck": "tsc",
     "pre-commit": "typecheck"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/preset-typescript": "^7.1.0",
+    "@types/classnames": "^2.2.6",
+    "@types/cors": "^2.8.4",
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
     "css-loader": "^2.0.1",
@@ -29,7 +34,11 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.2.0",
+    "@types/express": "^4.16.0",
     "babel-loader": "^8.0.4",
+    "classnames": "^2.2.6",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
     "react": "^16.7.0-alpha.2",
     "react-dom": "^16.7.0-alpha.2"
   }
