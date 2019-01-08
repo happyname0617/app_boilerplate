@@ -3,7 +3,9 @@ import React, { useState, SFC } from 'react'
 
 import styles from './styles.modules.scss'
 
-const Overlay = ({ open }: { open: boolean }) => {
+import { cold } from 'react-hot-loader';
+
+const Overlay = () => {
   return (
     <figcaption className={styles.overlay}>
       <h3 className={styles.title}>Food Name</h3>
@@ -22,9 +24,9 @@ export const Card: SFC<IProps> = ({ url }) => {
   return (
     <figure onClick={() => setOpen(!open)} className={cx(styles.wrapper, open && styles.open)}>
       <img  className={styles.image } src={url} />
-      <Overlay open={ open }/>
+      <Overlay/>
     </figure>
   )
 }
 
-export default Card
+export default cold(Card)
