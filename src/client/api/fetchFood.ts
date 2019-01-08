@@ -1,4 +1,4 @@
-const URL = '//localhost:3000/api'
+const URL = process.env.FOOD_URL!
 
 export interface IFoodList {
     images: string[];

@@ -1,5 +1,12 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack');
+require('dotenv').config() 
 const path = require('path')
+
+if (!process.env.FOOD_URL) {
+  console.error('please add FOOD_URL config to .env')
+  process.exit(1);
+}
 
 module.exports = {
   entry: './src/client/index.tsx',
@@ -31,6 +38,7 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js', 'scss' ]
   },
   plugins: [
-    new HtmlWebpackPlugin({template: './src/client/index.html'})
+    new HtmlWebpackPlugin({template: './src/client/index.html'}),
+    new Dotenv()
   ]
 }
