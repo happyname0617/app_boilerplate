@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --config webpack.dev.js",
+    "docz": "docz dev",
     "server:build": "tsc && babel src/server/ --extensions \".ts\" -d dist/",
     "server:start": "node dist/",
     "typecheck": "tsc",
@@ -22,6 +23,9 @@
     "@types/react": "^16.7.13",
     "@types/react-dom": "^16.0.11",
     "css-loader": "^2.0.1",
+    "docz": "^0.13.7",
+    "docz-plugin-css": "^0.11.0",
+    "docz-theme-default": "^0.13.7",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.3.0",
     "node-sass": "^4.11.0",

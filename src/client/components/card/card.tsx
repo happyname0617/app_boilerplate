@@ -1,7 +1,7 @@
 import cx from 'classnames';
-import React, { useState } from 'react'
+import React, { useState, SFC } from 'react'
 
-import styles from './styles.scss'
+import styles from './styles.modules.scss'
 
 const Overlay = ({ open }: { open: boolean }) => {
   return (
@@ -12,7 +12,12 @@ const Overlay = ({ open }: { open: boolean }) => {
   )
 }
 
-const Card = ({ url }: { url: string }) => {
+export interface IProps {
+  /** image url  */
+  url?: string
+}
+
+export const Card: SFC<IProps> = ({ url }) => {
   const [ open, setOpen ] = useState(false)
   return (
     <figure onClick={() => setOpen(!open)} className={cx(styles.wrapper, open && styles.open)}>
