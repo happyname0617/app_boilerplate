@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
-import { fetchFood, fetchFoodDefault, IFoodList } from './api/fetchFood'
+import { fetchFood, IFoodList } from './api/fetchFood'
 import Card from './components/card/card'
 
 import styles from './styles.scss'
 
 const App = () => {
   const [foodList, setFoodList] = useState<IFoodList | null>(null)
-  useEffect(fetchFood(setFoodList), fetchFoodDefault)
+  useEffect(fetchFood(setFoodList), [])
 
   return (
       <div className={styles.container}>

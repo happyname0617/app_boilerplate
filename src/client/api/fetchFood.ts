@@ -9,5 +9,3 @@ export const fetchFood = (setData: any) => () => {
       .then((resp) => resp.json())
       .then((data: IFoodList) => setData(data))
     }
-
-export const fetchFoodDefault = []
