@@ -4,6 +4,12 @@
   "main": "index.js",
   "repository": "https://github.com/andresattler/similartaste",
   "author": "Andre Sattler <andresattler.webdev@gmail.com>",
+  "contributors": [
+    { 
+      "name" : "Markus Dethlefsen",
+      "email" : "privat@markus-dethlefsen.de"
+    }
+  ],
   "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
