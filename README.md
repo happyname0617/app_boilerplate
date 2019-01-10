@@ -1,11 +1,17 @@
 # similartaste
+
+[![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lernajs.io/)
+
 find similar food taste people for local food
 
-to start client dev-server run: 
-``` yarn dev ```
+to install all packages
 
-to run api server run:
-``` yarn server:buid ```
-to boild the server and:
-``` yarn server:start```
-to run the api server
+```yarn bootstrap```
+
+to build api server run:
+
+```yarn buid```
+
+to run application in dev mode:
+
+```yarn dev```
