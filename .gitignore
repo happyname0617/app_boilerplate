@@ -1,4 +1,4 @@
 node_modules/
-*error.log
+*.log
 dist/
 .docz
