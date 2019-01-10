@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - "10.9.0"
+
+cache: yarn
+
+install:
+  - yarn global add lerna
+  - lerna bootstrap
+
+matrix:
+  include:
+  - name: Server Pipeline
+    env: PACKAGE_LOCATION=packages/server PACKAGE_NAME=similarfood-server
+  - name: Client Pipeline
+    env: PACKAGE_LOCATION=packages/client PACKAGE_NAME=similarfood-client
+
+script:
+  - cd $PACKAGE_LOCATION
+  - yarn test
+  - yarn build
