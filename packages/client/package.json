@@ -17,7 +17,8 @@
     "test": "true",
     "docz": "docz dev",
     "typecheck": "tsc",
-    "pre-commit": "typecheck"
+    "lint": "eslint /**/*.(ts|tsx)",
+    "pre-commit": "typecheck && lint"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
