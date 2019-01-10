@@ -4,14 +4,20 @@
 
 find similar food taste people for local food
 
-to install all packages
+## development
+
+### install all packages
 
 ```yarn bootstrap```
 
-to build api server run:
+### build api server
 
 ```yarn buid```
 
-to run application in dev mode:
+### run application in dev mode
 
 ```yarn dev```
+
+### clean all projects (npm_modules)
+
+```yarn clean```
