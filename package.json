@@ -2,7 +2,7 @@
   "name": "similartaste-core",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/andresattler/similartaste",
+  "repository": "https://github.com/happyname0617/similartaste",
   "author": "Andre Sattler <andresattler.webdev@gmail.com>",
   "contributors": [
     { 
