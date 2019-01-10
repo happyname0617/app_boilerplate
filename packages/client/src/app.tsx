@@ -11,11 +11,11 @@ const App = () => {
   useEffect(fetchFood(setFoodList), [])
 
   return (
-      <div className={styles.container}>
-        <h1 className={styles.title}>Similar Food</h1>
-        {foodList ? foodList.images.map((url: string, i: number) => <Card url={url} key={i}/>) : '...Loading'}
-        <MainMenu />
-      </div>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Similar Food</h1>
+      {foodList ? foodList.images.map((url: string, i: number) => <Card url={url} key={i} />) : '...Loading'}
+      <MainMenu />
+    </div>
   )
 }
 

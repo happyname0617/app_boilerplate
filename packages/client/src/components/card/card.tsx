@@ -1,9 +1,9 @@
-import cx from 'classnames';
+import cx from 'classnames'
 import React, { useState, SFC } from 'react'
 
 import styles from './styles.modules.scss'
 
-import { cold } from 'react-hot-loader';
+import { cold } from 'react-hot-loader'
 
 const Overlay = () => {
   return (
@@ -23,8 +23,8 @@ export const Card: SFC<IProps> = ({ url }) => {
   const [ open, setOpen ] = useState(false)
   return (
     <figure onClick={() => setOpen(!open)} className={cx(styles.wrapper, open && styles.open)}>
-      <img  className={styles.image } src={url} />
-      <Overlay/>
+      <img className={styles.image} src={url} />
+      <Overlay />
     </figure>
   )
 }
