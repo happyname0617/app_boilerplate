@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react'
-import styled from 'styled-components' 
+import styled from 'styled-components'
 
-import useWindowSize from '../../utils/useWindowSize';
+import useWindowSize from '../../utils/useWindowSize'
 
 const MenuBase = styled.div`
     background: white;
@@ -15,12 +15,12 @@ const MenuBase = styled.div`
 const MenuMobile = styled(MenuBase)`bottom: 0;`
 const MenuDesktop = styled(MenuBase)`top: 0;`
 
-const MainMenu: FunctionComponent<{}>  = () => {
-    let windowdata = useWindowSize()
+const MainMenu: FunctionComponent<{}> = () => {
+  let windowdata = useWindowSize()
 
-    return windowdata.innerWidth <= 720 
-        ? <MenuMobile>Mobile MainMenu Placeholder</MenuMobile>
-        : <MenuDesktop>Desktop MainMenu Placeholder</MenuDesktop>
+  return windowdata.innerWidth <= 720
+    ? <MenuMobile>Mobile MainMenu Placeholder</MenuMobile>
+    : <MenuDesktop>Desktop MainMenu Placeholder</MenuDesktop>
 }
 
 export default MainMenu
