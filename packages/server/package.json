@@ -13,6 +13,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc && babel src --extensions \".ts\" -d dist/",
+    "test": "npm run typecheck",
     "dev": "node dist/",
     "start": "node dist/",
     "typecheck": "tsc",

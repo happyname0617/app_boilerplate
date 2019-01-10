@@ -13,6 +13,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --config webpack.dev.js",
+    "build": "webpack --mode=production --config webpack.dev.js",
+    "test": "true",
     "docz": "docz dev",
     "typecheck": "tsc",
     "pre-commit": "typecheck"
