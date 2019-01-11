@@ -9,6 +9,8 @@ find similar food taste people for local food
 
 ### install all packages
 
+```yarn```
+
 ```yarn bootstrap```
 
 ### build api server
