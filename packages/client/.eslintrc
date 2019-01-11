@@ -1,0 +1,17 @@
+{
+  "parser": "typescript-eslint-parser",
+  "plugins": [
+    "typescript"
+  ],
+  "extends": [
+    "standard",
+    "standard-react",
+    ],
+  "env": { 
+    "browser": true,
+  },
+  "rules": {
+    "no-unused-vars": "off",   
+    "react/prop-types": "off"
+  }
+}

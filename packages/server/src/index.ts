@@ -1,8 +1,8 @@
 import express from 'express'
 import cors from 'cors'
-
-require('dotenv').config() 
 import data from './data'
+
+require('dotenv').config()
 
 const app = express()
 
