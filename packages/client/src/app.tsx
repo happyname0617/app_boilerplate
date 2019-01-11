@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-import { fetchFood, IFoodList } from './api/fetchFood'
+import getFoodImages from './utils/getFoodImages'
 import Card from './components/card/card'
 import MainMenu from './components/mainMenu'
 
 import styles from './styles.scss'
 
 const App = () => {
-  const [foodList, setFoodList] = useState<IFoodList | null>(null)
-  useEffect(fetchFood(setFoodList), [])
+  const foodList = getFoodImages()
 
   return (
     <div className={styles.container}>
