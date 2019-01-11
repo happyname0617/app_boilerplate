@@ -9,6 +9,10 @@ const Overlay = () => {
   return (
     <figcaption className={styles.overlay}>
       <h3 className={styles.title}>Food Name</h3>
+      <h3 className={styles.title}>Price</h3>
+      <h3 className={styles.title}>Restaurant</h3>
+      <h3 className={styles.title}>Location</h3>
+      <h3 className={styles.title}>Ingredients</h3>
       <button className={styles.button}>Eat</button>
     </figcaption>
   )
