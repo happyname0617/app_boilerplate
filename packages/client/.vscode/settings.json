@@ -1,28 +1,27 @@
 {
-    "tslint.enable": false,
-    "editor.formatOnSave": true,
-    "[typescriptreact]": {
-      "editor.formatOnSave": false,
+  "tslint.enable": false,
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.formatOnSave": false,
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false,
+  },
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    {
+      "language": "typescript",
+      "autoFix": true
     },
-    "[typescript]": {
-      "editor.formatOnSave": false,
-    },
-    "javascript.format.enable": false,
-    "typescript.format.enable": false,
-    "eslint.enable": true,
-    "eslint.run": "onType",
-    "eslint.autoFixOnSave": true,
-    "eslint.packageManager": "yarn",
-    "eslint.alwaysShowStatus": true,
-    "eslint.validate": [
-      {
-        "language": "typescript",
-        "autoFix": true
-      },
-      {
-        "language": "typescriptreact",
-        "autoFix": true
-      }
-    ],
-    "typescript.tsdk": "node_modules\\typescript\\lib",
-  }
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+}
