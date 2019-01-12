@@ -5,7 +5,7 @@ export interface IFoodImages {
     images: string[];
 }
 
-const getFoodImages =  () => {
+const getFoodImages = () => {
   const [foodImages, setFoodImages] = useState<IFoodImages | null>(null)
 
   useEffect(() => {

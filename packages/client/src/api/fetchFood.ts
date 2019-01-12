@@ -1,4 +1,4 @@
-const fetchFood = (URL = process.env.FOOD_URL!) => 
+const fetchFood = (URL = process.env.FOOD_URL!) =>
   fetch(URL)
     .then((resp) => resp.json())
     .catch(reason => console.error(reason))
