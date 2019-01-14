@@ -1,20 +1,36 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-import { fetchFood, IFoodList } from './api/fetchFood'
+import getFoodImages from './utils/getFoodImages'
 import Card from './components/card/card'
-import MainMenu from './components/mainMenu'
+import { Title1 } from './components/title'
+import { D1, D2 } from './components/display'
+import { MenuMobile, MenuDesktop } from './components/menu'
+import { ButtonMenuFeed, ButtonMenuHistory } from './components/button'
 
-import styles from './styles.scss'
+import styles from './app.scss'
 
 const App = () => {
-  const [foodList, setFoodList] = useState<IFoodList | null>(null)
-  useEffect(fetchFood(setFoodList), [])
-
+  const foodList = getFoodImages()
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Similar Food</h1>
-      {foodList ? foodList.images.map((url: string, i: number) => <Card url={url} key={i} />) : '...Loading'}
-      <MainMenu />
+      <MenuDesktop>
+        <ButtonMenuHistory />
+        <ButtonMenuFeed />
+        <D1>Desktop</D1>
+      </MenuDesktop>
+
+      <Title1>Similar Food</Title1>
+      {foodList
+        ? foodList.images.map((url: string, i: number) => <Card url={url} key={i} />)
+        : '...Loading'
+      }
+
+      <MenuMobile>
+        <ButtonMenuHistory />
+        <ButtonMenuFeed />
+        <D1>Mobile</D1>
+        <D2>test</D2>
+      </MenuMobile>
     </div>
   )
 }

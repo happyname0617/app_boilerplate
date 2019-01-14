@@ -18,7 +18,7 @@ module.exports = {
     rules: [
       { test: /\.(tsx?$)/, loader: 'babel-loader' },
       {
-        test: /\.scss$/,
+        test: /\.(scss|css)$/,
         use: [
           { loader: 'style-loader' },
           {
@@ -35,7 +35,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js', 'scss' ]
+    extensions: [ '.tsx', '.ts', '.js', 'scss', 'css' ]
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}),

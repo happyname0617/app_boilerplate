@@ -1,5 +1,8 @@
+@value textColorMain, textColorSecondary from 'layout/colors.scss';
+
 body {
   margin: 0;
+  color: textColorMain;
 }
 
 .container {
@@ -8,9 +11,4 @@ body {
   align-items: center;
   justify-content: center;
   flex-flow: column;
-}
-
-.title {
-  font-family: sans-serif;
-  font-size: 48px;
 }
