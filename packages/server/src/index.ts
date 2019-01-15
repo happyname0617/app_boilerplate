@@ -1,17 +1,26 @@
-import express from "express";
-import cors from "cors";
-import data from "./data";
+import express from 'express'
+import cors from 'cors'
+import mongoose from 'mongoose'
 
-require("dotenv").config();
+import data from './data'
 
-const app = express();
+mongoose.connect('mongodb://db:27017')
 
-app.use(cors());
+const db = mongoose.connection
+db.on('error', console.error.bind(console, 'connection error:'))
+db.once('open', function() {
+  console.log('were connected!')
+})
+require('dotenv').config()
 
-app.get("/api", (req, res) => {
-  res.send(data);
-});
+const app = express()
+
+app.use(cors())
+
+app.get('/api', (req, res) => {
+  res.send(data)
+})
 
 app.listen(process.env.PORT, () => {
-  console.log(`server running on port ${process.env.PORT}`);
-});
+  console.log(`server running on port ${process.env.PORT}`)
+})

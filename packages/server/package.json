@@ -14,12 +14,12 @@
   "scripts": {
     "test": "npm run typecheck",
     "transpile": "babel src --extensions \".ts\" -d dist/",
-    "build": "tsc && yarn transpile",
+    "build": "yarn typecheck && yarn transpile",
     "dev": "yarn transpile --watch & nodemon dist/",
     "start": "node dist/",
     "typecheck": "tsc",
     "lint": "eslint /**/*.ts",
-    "p": "prettier --write 'src/**/*.ts,'",
+    "p": "prettier --write 'src/**/*.ts'",
     "p:w": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "pre-commit": "typecheck && lint"
   },
@@ -48,6 +48,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^6.2.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.4.4"
   }
 }
