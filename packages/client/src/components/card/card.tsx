@@ -24,9 +24,12 @@ export interface IProps {
 }
 
 export const Card: SFC<IProps> = ({ url }) => {
-  const [ open, setOpen ] = useState(false)
+  const [open, setOpen] = useState(false)
   return (
-    <figure onClick={() => setOpen(!open)} className={cx(styles.wrapper, open && styles.open)}>
+    <figure
+      onClick={() => setOpen(!open)}
+      className={cx(styles.wrapper, open && styles.open)}
+    >
       <img className={styles.image} src={url} />
       <Overlay />
     </figure>

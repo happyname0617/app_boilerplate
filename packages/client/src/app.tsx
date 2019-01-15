@@ -21,9 +21,10 @@ const App = () => {
 
       <Title1>Similar Food</Title1>
       {foodList
-        ? foodList.images.map((url: string, i: number) => <Card url={url} key={i} />)
-        : '...Loading'
-      }
+        ? foodList.images.map((url: string, i: number) => (
+            <Card url={url} key={i} />
+          ))
+        : '...Loading'}
 
       <MenuMobile>
         <ButtonMenuHistory />

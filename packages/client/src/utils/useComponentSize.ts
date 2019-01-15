@@ -6,9 +6,7 @@ const getSize = (el: HTMLElement | null) => ({
 })
 
 const useComponentSize = (ref: React.RefObject<HTMLElement>) => {
-  let [componentSize, setSize] = useState(
-    getSize(ref ? ref.current : null)
-  )
+  let [componentSize, setSize] = useState(getSize(ref ? ref.current : null))
 
   const handleResize = useCallback(
     () => ref.current && setSize(getSize(ref.current)),

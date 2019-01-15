@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 interface IProps {
-    height: number
+  height: number
 }
 
 const Pusher = styled.div(({ height }: IProps) => ({

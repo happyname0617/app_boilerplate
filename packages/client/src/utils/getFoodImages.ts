@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import fetchFood from '../api/fetchFood'
 
 export interface IFoodImages {
-    images: string[];
+  images: string[]
 }
 
 const getFoodImages = () => {

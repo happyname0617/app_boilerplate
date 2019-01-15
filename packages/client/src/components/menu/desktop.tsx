@@ -7,12 +7,12 @@ import Base from './base'
 import Pusher from './pusher'
 
 const PositionBottom = styled(Base)`
-    top: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    border-bottom: 1px solid #e8e8e8;
+  top: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom: 1px solid #e8e8e8;
 `
 
 const mobileMenu: FunctionComponent<{}> = ({ children }) => {
@@ -25,9 +25,7 @@ const mobileMenu: FunctionComponent<{}> = ({ children }) => {
 
   return (
     <>
-      <PositionBottom ref={ref}>
-        { children }
-      </PositionBottom>
+      <PositionBottom ref={ref}>{children}</PositionBottom>
       <Pusher height={height} />
     </>
   )
