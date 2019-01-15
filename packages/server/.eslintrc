@@ -2,8 +2,13 @@
   "parser": "typescript-eslint-parser",
   "plugins": [
     "typescript"
+    "prettier",
+    "prettier/standard"
   ],
-  "extends": ["standard"],
+  "extends": [
+    "standard",
+    "prettier"
+  ],
   "env": { 
     "node": true,
     }
