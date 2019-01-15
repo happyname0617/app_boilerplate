@@ -19,7 +19,7 @@
     "typecheck": "tsc",
     "lint": "eslint /**/*.(ts|tsx)",
     "p": "prettier --write 'src/**/*.{ts,tsx}'",
-    "p:w": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
+    "p:w": "onchange 'src/**/*.{ts,tsx}' -- prettier --write {{changed}}",
     "pre-commit": "typecheck && lint"
   },
   "devDependencies": {

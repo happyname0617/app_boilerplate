@@ -19,7 +19,7 @@
     "start": "node dist/",
     "typecheck": "tsc",
     "lint": "eslint /**/*.ts",
-    "p": "prettier --write 'src/**/*.{ts,tsx}'",
+    "p": "prettier --write 'src/**/*.ts,'",
     "p:w": "onchange 'src/**/*.ts' -- prettier --write {{changed}}",
     "pre-commit": "typecheck && lint"
   },
