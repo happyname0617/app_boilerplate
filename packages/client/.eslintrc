@@ -1,7 +1,7 @@
 {
   "parser": "typescript-eslint-parser",
   "plugins": [
-    "typescript"
+    "typescript",
     "prettier",
     "prettier/standard"
   ],
@@ -11,7 +11,7 @@
     "prettier"
     ],
   "env": { 
-    "browser": true,
+    "browser": true
   },
   "rules": {
     "no-unused-vars": "off",   
