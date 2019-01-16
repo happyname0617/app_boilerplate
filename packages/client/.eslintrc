@@ -2,10 +2,13 @@
   "parser": "typescript-eslint-parser",
   "plugins": [
     "typescript"
+    "prettier",
+    "prettier/standard"
   ],
   "extends": [
     "standard",
     "standard-react",
+    "prettier"
     ],
   "env": { 
     "browser": true,

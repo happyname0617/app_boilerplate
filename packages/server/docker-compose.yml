@@ -1,0 +1,27 @@
+  version: '2'
+
+  services:
+    api:
+      build: .
+      command: yarn dev
+      ports:
+        - '3030:3030'
+      volumes:
+        - .:/code
+        - /code/node_modules
+      links:
+        - db
+      depends_on:
+        - db
+    db:
+      image: 'mongo:3.4'
+      ports:
+        - "27017"
+      volumes:
+        - mongo_data:/data/db
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: example
+
+  volumes:
+    mongo_data:

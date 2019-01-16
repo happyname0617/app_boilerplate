@@ -2,8 +2,8 @@ import styled from 'styled-components'
 import colors from '../../layout/colors.scss'
 
 const Title = styled.h1`
-    color: ${colors.textColorSecondary};
-    font-family: sans-serif;
+  color: ${colors.textColorSecondary};
+  font-family: sans-serif;
 `
 
 export const Title1 = Title
