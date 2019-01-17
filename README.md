@@ -27,6 +27,10 @@ find similar food taste people for local food
 
 ## docker
 
+### start whole app in dev mode
+
+    docker-compose up
+
 ### client
 
 #### prouction mode
