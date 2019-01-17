@@ -1,0 +1,22 @@
+version: '3.4'
+
+services:
+  web:
+    build: 
+      context: .
+      target: build-stage
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - 8080:8080
+    command: 
+      - /bin/sh
+      - -c
+      - |
+        yarn
+        ls -la
+        yarn run dev --host 0.0.0.0 --hot --inline
+
+volumes:
+  node_modules:
