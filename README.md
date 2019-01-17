@@ -24,3 +24,18 @@ find similar food taste people for local food
 ### clean all projects (npm_modules)
 
 ```yarn clean```
+
+## docker
+
+### client
+
+#### prouction mode
+
+    cd packages/client
+    docker build -t similartaste-client .
+    docker run -p 80:80 similartaste-client
+
+#### development mode
+
+    cd packages/client
+    docker-compose up
