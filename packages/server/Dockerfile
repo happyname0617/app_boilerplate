@@ -1,18 +1,27 @@
-FROM node:11.6
+# Stage 0, "build-stage" also used on development
+FROM node:11.6-alpine as build-stage
 
-RUN npm install -g yarn
+WORKDIR /app/
 
-WORKDIR /code/
-
-COPY package.json .
+COPY package.json ./
 
 RUN yarn
 
-COPY . .
-
-# RUN yarn build
+COPY ./ ./
 
 EXPOSE 3030
 
-CMD ["yarn", "dev"]
+VOLUME /app
 
+RUN yarn build
+
+FROM node:11.6-alpine
+
+WORKDIR /app/
+
+COPY --from=build-stage /app/package.json ./
+COPY --from=build-stage /app/dist ./dist
+
+RUN yarn install --production
+
+CMD ["yarn", "start"]
