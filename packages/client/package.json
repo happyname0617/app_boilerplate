@@ -12,7 +12,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --mode=development --config webpack.dev.js --host 0.0.0.0 --port 80 --hot --inline",
+    "dev": "webpack-dev-server --mode=development --config webpack.dev.js --host 0.0.0.0 --port 80 --inline",
     "build": "webpack --mode=production --config webpack.dev.js",
     "test": "true",
     "docz": "docz dev",
@@ -51,7 +51,9 @@
     "node-sass": "^4.11.0",
     "prettier": "^1.15.3",
     "sass-loader": "^7.1.0",
+    "serviceworker-webpack-plugin": "^1.0.1",
     "style-loader": "^0.23.1",
+    "types-serviceworker": "https://github.com/shqld/types-serviceworker",
     "typescript": "^3.2.2",
     "typescript-eslint-parser": "^21.0.2",
     "webpack": "^4.27.1",
