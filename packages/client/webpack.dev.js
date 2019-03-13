@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 require('dotenv').config() 
 const path = require('path')
@@ -12,7 +13,7 @@ module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle[hash].js',
   },
   module: {
     rules: [
@@ -39,6 +40,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({template: './src/index.html'}),
-    new Dotenv()
+    new Dotenv(),
+    new ServiceWorkerWebpackPlugin({
+      entry: path.join(__dirname, 'src/sw.ts'),
+      excludes: ['**/*.json'] // temp to not include hot-reload.jsons
+    }),
   ]
 }
